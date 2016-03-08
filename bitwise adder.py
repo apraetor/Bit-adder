@@ -4,7 +4,7 @@ strA = int(input("First: "), base=2)
 strB = int(input("Second: "), base=2)
 
 
-# AND of two values, shifted left 1 bit is the "carry"
+# AND of two values, left shift by 1
 def carry(strA, strB):
     return (strA & strB) << 1
 
