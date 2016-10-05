@@ -13,11 +13,14 @@ def carry(strA, strB):
 def adder(strA, strB):
     return strA ^ strB
 
+
 while (strB > 0):
-    strA1 = adder(strA, strB)
-    strB1 = carry(strA, strB)
-    strA = strA1
-    strB = strB1
+    strAdd = adder(strA, strB)
+    strCarry = carry(strA, strB)
+    # using intermediate vars because adder() and carry() must both be called
+    # prior to vars updating
+    strA = strAdd
+    strB = strCarry
 
 
 print("Sum: {0:b}".format(strA))
